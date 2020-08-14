@@ -32,7 +32,7 @@ function App() {
       </main>
 
       <footer className="App-footer">
-        <p>Footer</p>
+        <p>We are Live</p>
       </footer>
 
     </div>
