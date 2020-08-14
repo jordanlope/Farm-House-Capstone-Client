@@ -1,0 +1,9 @@
+.Nav-Bar ul li {
+    display: inline;
+    margin: 10px;
+}
+
+.Nav-Bar {
+    background-color: rgb(72, 183, 191);
+    padding: 10px;
+}
