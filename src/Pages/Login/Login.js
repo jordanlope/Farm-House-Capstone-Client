@@ -1,16 +1,42 @@
 import React, { Component } from 'react';
 import './Login.css';
+import { withRouter } from 'react-router-dom';
+import AuthApiService from '../../services/auth-api-service';
+import TokenService from '../../services/token-service';
 
 class Login extends Component {
     
-    //state = { error: null }
+    state = { error: null }
+
+    handleSubmit = ev => {
+      ev.preventDefault()
+      const { user_name, password } = ev.target
+
+      this.setState({ error: null })
+
+      AuthApiService.postLogin({
+        user_name: user_name.value,
+        password: password.value,
+      }).then(res => {
+        user_name.value = ''
+        password.value = ''
+        TokenService.saveAuthToken(res.authToken)
+
+        
+
+        this.props.history.push('/')
+      }).catch(res => {
+        console.log(res.error)
+        this.setState({ error: res.error })
+      })
+    }
 
     render() {
       //const { error } = this.state
       return (
         <form 
           className='LoginForm'
-          // onSubmit={this.handleSubmitJwtAuth}
+          onSubmit={this.handleSubmit}
         >
           {/* <div role='alert'>
             {error && <p className='red'>{error}</p>}
@@ -44,4 +70,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);

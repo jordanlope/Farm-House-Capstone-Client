@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FarmHouse component renders the UI as expected 1`] = `
+<section
+  className="FarmHouse"
+>
+  <h2>
+    Farm House Details:
+  </h2>
+  <p>
+    Address: undefined
+  </p>
+  <p>
+    Description: undefined
+  </p>
+  <p>
+    Price: $undefined
+  </p>
+  <h2>
+    Realtor Contact Info:
+  </h2>
+  <p>
+    Name: undefined
+  </p>
+  <p>
+    Email: undefined
+  </p>
+  <p>
+    Number: undefined
+  </p>
+  <p>
+    Description: undefined
+  </p>
+</section>
+`;

@@ -1,0 +1,21 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import AddFarmHouse from './AddFarmHouse';
+import renderer from 'react-test-renderer';
+
+describe('AddFarmHouse component', () => {
+    // Smoke test
+    it('renders without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<AddFarmHouse />, div);
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    // Snapshot test
+    it('renders the UI as expected', () => {
+        const tree = renderer
+            .create(<AddFarmHouse />)
+            .toJSON();
+        expect(tree).toMatchSnapshot();
+    })
+})

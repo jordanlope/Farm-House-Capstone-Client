@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage component renders the UI as expected 1`] = `
+<h1>
+  Error: 
+  This is a test
+</h1>
+`;
