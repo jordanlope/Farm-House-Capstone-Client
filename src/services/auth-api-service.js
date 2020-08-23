@@ -6,6 +6,7 @@ const AuthApiService = {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
+                'Authorization': `Bearer ${config.TOKEN_KEY}`
             },
             body: JSON.stringify(credentials),
         }).then(res =>
@@ -19,6 +20,7 @@ const AuthApiService = {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
+                'Authorization': `Bearer ${config.TOKEN_KEY}`
             },
             body: JSON.stringify(user),
         }).then(res =>
