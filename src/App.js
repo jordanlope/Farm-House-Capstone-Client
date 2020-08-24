@@ -7,6 +7,7 @@ import AddFarmHouse from './Pages/AddFarmHouse/AddFarmHouse';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/RegistrationForm/RegistrationForm';
 import FarmHouse from './Pages/FarmHouse/FarmHouse';
+import LandingPage from './Pages/LandingPage/LandingPage';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import NavBar from './Pages/NavBar/NavBar';
 
@@ -32,16 +33,13 @@ class App extends Component {
             <Route path='/login' component={Login}/>
             <Route path='/signup' component={Signup}/>
             <Route path='/home/:homeId' component={FarmHouse}/>
+            <Route path='/landingPage' component={LandingPage}/>
             <PrivateRoute path='/addFarmHouse' component={AddFarmHouse}/>
             <Route render={ () => (
               <ErrorPage errorMessage={'Page not found'}/>
             )} />
           </Switch>
         </main>
-
-        {/* <footer className="App-footer">
-          <p>We are Live</p>
-        </footer> */}
       </div>
     )
   }
