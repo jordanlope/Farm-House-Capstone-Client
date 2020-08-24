@@ -22,6 +22,11 @@ class NavBar extends Component {
                   Sign up
                 </Link>
               </li>
+              <li>
+                <Link to='/addFarmHouse'>
+                  Add FarmHouse
+                </Link>
+              </li>
             </ul>
           </nav>
         </>

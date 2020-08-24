@@ -18,6 +18,7 @@ export default class FarmHouses extends React.Component {
     const { farmHouseList } = this.context ? this.context : []
 
     const { error } = this.context
+
     return (
       <>
         <h1>Farm Houses:</h1>

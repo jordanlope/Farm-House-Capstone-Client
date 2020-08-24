@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './RegistrationForm.css';
 import { withRouter } from 'react-router-dom';
 import AuthApiService from '../../services/auth-api-service';
+import RealtorContext from '../../contexts/RealtorContext';
 
 class RegistrationForm extends Component {
+  static contextType = RealtorContext
 
   state = { error: null }
 
@@ -24,6 +26,16 @@ class RegistrationForm extends Component {
       password: password.value
     }).then(data => {
       console.log('Before push')
+      
+      this.context.setRealtor({
+        full_name: full_name.value,
+        user_name: user_name.value,
+        email: email.value,
+        number: number.value,
+        description: description.value
+      })
+
+      console.log(full_name.value)
       full_name.value = ''
       user_name.value = ''
       email.value = ''

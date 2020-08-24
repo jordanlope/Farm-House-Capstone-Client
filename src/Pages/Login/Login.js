@@ -3,9 +3,11 @@ import './Login.css';
 import { withRouter } from 'react-router-dom';
 import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
+import RealtorContext from '../../contexts/RealtorContext';
 
 class Login extends Component {
-    
+    static contextType = RealtorContext  
+
     state = { error: null }
 
     handleSubmit = ev => {
@@ -18,11 +20,22 @@ class Login extends Component {
         user_name: user_name.value,
         password: password.value,
       }).then(res => {
+        console.log('Respond after login', res.user)
+        console.log(res.user.full_name)
+        this.context.setRealtor(
+          res.user.id,
+          res.user.full_name,
+          res.user.user_name,
+          res.user.email,
+          res.user.number,
+          res.user.description
+        )
+
+        console.log('Realtors: ', this.context.getRealtor())
+
         user_name.value = ''
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
-
-        
 
         this.props.history.push('/')
       }).catch(res => {

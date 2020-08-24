@@ -5,15 +5,18 @@ import './index.css';
 import App from './App';
 import { FarmHouseListProvider } from './contexts/FarmHouseListContext'
 import { FarmHouseProvider } from './contexts/FarmHouseContext'
+import { RealtorProvider } from './contexts/RealtorContext'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
-    <FarmHouseListProvider>
-      <FarmHouseProvider>
-        <App />
-      </FarmHouseProvider>
-    </FarmHouseListProvider>
+    <RealtorProvider>
+      <FarmHouseListProvider>
+        <FarmHouseProvider>
+          <App />
+        </FarmHouseProvider>
+      </FarmHouseListProvider>
+    </RealtorProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

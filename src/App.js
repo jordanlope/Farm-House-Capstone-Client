@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import PrivateRoute from './Utils/PrivateRoute';
+import PublicOnlyRoute from './Utils/PublicOnlyRoute';
 import FarmHouses from './Pages/FarmHouses/FarmHouses';
+import AddFarmHouse from './Pages/AddFarmHouse/AddFarmHouse';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/RegistrationForm/RegistrationForm';
 import FarmHouse from './Pages/FarmHouse/FarmHouse';
@@ -30,6 +33,7 @@ class App extends Component {
             <Route path='/login' component={Login}/>
             <Route path='/signup' component={Signup}/>
             <Route path='/home/:homeId' component={FarmHouse}/>
+            <PrivateRoute path='/addFarmHouse' component={AddFarmHouse}/>
             <Route render={ () => (
               <ErrorPage errorMessage={'Page not found'}/>
             )} />
