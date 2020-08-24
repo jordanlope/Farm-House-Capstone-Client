@@ -1,7 +1,47 @@
-.FarmList li {
-    list-style-type: none;
-    margin: 10px;
-    padding: 10px;
-    border-style: solid;
-    /* box-shadow: 10px 15px 18px grey; */
+ul.FarmList {
+    margin: 0px;
+    padding: 0px;
+}
+
+.FarmList li a{
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.FarmList li a:hover{
+    font-weight: bold;
+    background-color: rgba(36, 35, 35, 0.411);
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+img.MainImage {
+    max-width: 100%;
+    margin: 0px;
+}
+
+h1.title {
+    text-shadow: 1px 2px gainsboro;
+    /* background-color:lightslategray; */
+    text-align: center;
+    margin: -3px;
+    padding: 20px;
 }

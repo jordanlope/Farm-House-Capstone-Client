@@ -1,9 +1,39 @@
-.Nav-Bar ul li {
-    display: inline;
-    margin: 10px;
-}
-
 .Nav-Bar {
     background-color: rgb(72, 183, 191);
     padding: 10px;
+}
+
+.Nav-Bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.Nav-Bar ul li {
+    margin: 10px;
+}
+
+.Nav-Bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    text-shadow: 1px 1px rgba(220, 220, 220, 0.365);
+}
+
+.Nav-Bar ul li a:hover {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 500px) {
+    .Nav-Bar ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        list-style-type: none;
+    }
 }

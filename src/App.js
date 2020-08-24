@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import PrivateRoute from './Utils/PrivateRoute';
-import PublicOnlyRoute from './Utils/PublicOnlyRoute';
 import FarmHouses from './Pages/FarmHouses/FarmHouses';
 import AddFarmHouse from './Pages/AddFarmHouse/AddFarmHouse';
 import Login from './Pages/Login/Login';
@@ -27,7 +26,7 @@ class App extends Component {
         </header>
 
         <main className="App-main">
-        {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
+          {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
           <Switch>
             <Route exact path='/' component={FarmHouses}/>
             <Route path='/login' component={Login}/>
@@ -40,9 +39,9 @@ class App extends Component {
           </Switch>
         </main>
 
-        <footer className="App-footer">
+        {/* <footer className="App-footer">
           <p>We are Live</p>
-        </footer>
+        </footer> */}
       </div>
     )
   }

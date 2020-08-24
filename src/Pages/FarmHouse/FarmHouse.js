@@ -20,11 +20,11 @@ export default class FarmHouse extends Component {
     console.log('This is current realtor', realtor)
     return (
       <section className="FarmHouse">
-        <h2>Farm House Details:</h2>
+        <h2>Farm House Details</h2>
         <p>{"Address: " + farmHouse.address}</p>
         <p>{"Description: " + farmHouse.description}</p>
         <p>{"Price: $" + farmHouse.price}</p>
-        <h2>Realtor Contact Info:</h2>
+        <h2>Realtor Contact Info</h2>
         <p>{"Name: " + realtor.full_name}</p>
         <p>{"Email: " + realtor.email}</p>
         <p>{"Number: " + realtor.number}</p>

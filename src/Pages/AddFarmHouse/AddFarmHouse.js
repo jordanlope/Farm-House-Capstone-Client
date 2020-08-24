@@ -106,6 +106,7 @@ class AddFarmHouse extends Component {
             <form
                 className="RegistrationForm"
                 onSubmit={this.handleSubmit}>
+                <h1>Add Farm House</h1>
                 <div className='address'>
                     <label>
                         Address:
@@ -181,7 +182,7 @@ class AddFarmHouse extends Component {
                     />
                 </div>
                 <button type='submit'>
-                    Add Farm House
+                    Complete
                 </button>
             </form>
         );

@@ -1,8 +1,9 @@
 import React from 'react';
 import './FarmHouses.css';
 import { Link } from 'react-router-dom';
-import FarmHousesService from '../../services/farmHouses-api-service'
-import FarmHouseListContext from '../../contexts/FarmHouseListContext'
+import MainImage from '../../Assets/michael-bourgault-YvvHEQNgMcU-unsplash.jpg';
+import FarmHousesService from '../../services/farmHouses-api-service';
+import FarmHouseListContext from '../../contexts/FarmHouseListContext';
 
 export default class FarmHouses extends React.Component {
   static contextType = FarmHouseListContext
@@ -17,11 +18,10 @@ export default class FarmHouses extends React.Component {
   render() {
     const { farmHouseList } = this.context ? this.context : []
 
-    const { error } = this.context
-
     return (
       <>
-        <h1>Farm Houses:</h1>
+        <img className='MainImage' src={MainImage} alt={"Logo"} />
+        <h1 className='title'>Farm Houses for Sale</h1>
         <ul className='FarmList'>
           {
             farmHouseList.map(house =>

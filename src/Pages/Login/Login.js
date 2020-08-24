@@ -37,7 +37,7 @@ class Login extends Component {
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
 
-        this.props.history.push('/')
+        this.props.history.push('/addFarmHouse')
       }).catch(res => {
         console.log(res.error)
         this.setState({ error: res.error })
@@ -49,14 +49,13 @@ class Login extends Component {
       return (
         <form 
           className='LoginForm'
-          onSubmit={this.handleSubmit}
-        >
+          onSubmit={this.handleSubmit}>
           {/* <div role='alert'>
             {error && <p className='red'>{error}</p>}
           </div> */}
           <div className='user_name'>
             <label htmlFor='LoginForm__user_name'>
-              User name:
+              User name
             </label>
             <input
               required
@@ -66,7 +65,7 @@ class Login extends Component {
           </div>
           <div className='password'>
             <label htmlFor='LoginForm__password'>
-              Password:
+              Password
             </label>
             <input
               required
