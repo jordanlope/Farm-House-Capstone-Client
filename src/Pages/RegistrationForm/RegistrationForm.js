@@ -11,17 +11,16 @@ class RegistrationForm extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
-    const { full_name, user_name, email, number, description, password } = ev.target
+    const { full_name, user_name, email, description, password } = ev.target
 
     this.setState({ error: null })
 
-    console.log(full_name, user_name, email, number, description, password)
+    console.log(full_name, user_name, email, description, password)
 
     AuthApiService.postUser({
       full_name: full_name.value,
       user_name: user_name.value,
       email: email.value,
-      number: number.value,
       description: description.value,
       password: password.value
     }).then(data => {

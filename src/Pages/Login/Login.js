@@ -27,7 +27,6 @@ class Login extends Component {
           res.user.full_name,
           res.user.user_name,
           res.user.email,
-          res.user.number,
           res.user.description
         )
 
