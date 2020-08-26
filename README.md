@@ -24,6 +24,19 @@ https://user-images.githubusercontent.com/26450419/91245963-c3e6ba00-e71c-11ea-8
 https://user-images.githubusercontent.com/26450419/91245981-cea14f00-e71c-11ea-9533-175eb074a1e2.png
 https://user-images.githubusercontent.com/26450419/91246001-db25a780-e71c-11ea-9554-ef2cb18c99c4.png
 
+Pages:
+https://farm-house-capstone-client-k5092n3d1.vercel.app/
+https://farm-house-capstone-client-k5092n3d1.vercel.app/landingPage
+  Demo Account:
+-You can go to the Login page on the nav bar and enter in these credentials
+Username: jordanlopez999
+Password: Tapout10$
+-It will then direct you to the add Farm House Form after authentication
+https://farm-house-capstone-client-k5092n3d1.vercel.app/login
+https://farm-house-capstone-client-k5092n3d1.vercel.app/signup
+https://farm-house-capstone-client-k5092n3d1.vercel.app/addFarmHouse FYI-Must log in to demo account in order to add Farm House
+https://farm-house-capstone-client-k5092n3d1.vercel.app/home/5
+
 Summary: 
 This website allows for users to view Farm Houses. Moreover, realtors are able to add their listings to this website for potential buyers.
 
