@@ -23,7 +23,7 @@ class Login extends Component {
         console.log('Respond after login', res.user)
         console.log(res.user.full_name)
         this.context.setRealtor(
-          res.user.id,
+          res.user.realtorid,
           res.user.full_name,
           res.user.user_name,
           res.user.email,

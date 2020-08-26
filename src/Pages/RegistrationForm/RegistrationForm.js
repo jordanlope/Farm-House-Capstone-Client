@@ -31,7 +31,6 @@ class RegistrationForm extends Component {
         full_name: full_name.value,
         user_name: user_name.value,
         email: email.value,
-        number: number.value,
         description: description.value
       })
 
@@ -39,7 +38,6 @@ class RegistrationForm extends Component {
       full_name.value = ''
       user_name.value = ''
       email.value = ''
-      number.value = ''
       description.value = ''
       password.value = ''
 
@@ -74,15 +72,6 @@ class RegistrationForm extends Component {
             required
             name='full_name'/>
         </div>
-        <div className='number'>
-          <label >
-            Number:
-          </label>
-          <input
-            type='text'
-            required
-            name='number'/>
-        </div>
         <div className='email'>
           <label>
             Email:
@@ -107,7 +96,7 @@ class RegistrationForm extends Component {
             Password:
           </label>
           <input 
-            type='text'
+            type='password'
             required
             name='password'/>
         </div>

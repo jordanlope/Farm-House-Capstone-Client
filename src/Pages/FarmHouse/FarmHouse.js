@@ -27,7 +27,6 @@ export default class FarmHouse extends Component {
         <h2>Realtor Contact Info</h2>
         <p>{"Name: " + realtor.full_name}</p>
         <p>{"Email: " + realtor.email}</p>
-        <p>{"Number: " + realtor.number}</p>
         <p>{"Description: " + realtor.description}</p>
       </section>
     );

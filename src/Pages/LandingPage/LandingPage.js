@@ -4,7 +4,7 @@ import './LandingPage.css';
 class LandingPage extends React.Component {
   render() {
     return (
-      <div>
+      <div className='landingPage'>
         <h1>What is Molosan?</h1>
         <p>Molosan is a website that displays Farm Houses for sale</p>
         <h1>Main Functionality:</h1>

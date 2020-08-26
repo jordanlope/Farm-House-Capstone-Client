@@ -20,6 +20,8 @@ class App extends Component {
   }
 
   render() {
+    document.title = 'Molosan'
+
     return (
       <div className="App">
         <header className="App-header">

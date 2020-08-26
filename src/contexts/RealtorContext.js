@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 const RealtorContext = React.createContext({
+    id: '',
     full_name: '',
     user_name: '', 
     email: '',
-    number: '',
     description: '',
     error: null
 })
@@ -17,18 +17,16 @@ export class RealtorProvider extends Component {
         full_name: '',
         user_name: '', 
         email: '',
-        number: null,
         description: '',
         error: null
     };
 
-    setRealtor = (id, full_name, user_name, email, number, description) => {
+    setRealtor = (id, full_name, user_name, email, description) => {
         this.setState({
             id,
             full_name,
             user_name,
             email,
-            number,
             description
         })
     }
@@ -38,14 +36,12 @@ export class RealtorProvider extends Component {
         const full_name = this.state.full_name
         const user_name = this.state.user_name
         const email = this.state.email
-        const number = this.state.number
         const description = this.state.description
         return {
             id,
             full_name,
             user_name,
             email,
-            number,
             description
         }
     }
@@ -65,7 +61,6 @@ export class RealtorProvider extends Component {
             full_name: this.state.full_name,
             user_name: this.state.user_name,
             email: this.state.email,
-            number: this.state.number,
             description: this.state.description,
             error: this.state.error,
             setError: this.setError,
